@@ -20,10 +20,10 @@ while True:
         case "2":
             if ventas:
                 print("Ventas ingresadas")
-                ind=0
+                dia=0
                 for i in ventas:
-                        ind +=1
-                        print(f"{ind}. Q{i}")
+                        dia +=1
+                        print(f"Dia {dia}. Q{i}")
             else:
                 print("No hay ventas registradas")
         case "3":
@@ -54,5 +54,19 @@ while True:
                     if i > 1000:
                         contador +=1
                 print(f"Los días en que las ventas superan los Q10OO: {contador}")
+            else:
+                print("No hay ventas registradas")
+        case "6":
+            if ventas:
+                enumerar_dias =1
+                for i in ventas:
+                    if i > 1000:
+                        clasificacion_venta= "venta alta"
+                    elif 500 <= i <= 1000:
+                        clasificacion_venta = "venta media"
+                    else:
+                        clasificacion_venta= "venta baja"
+                    print(f"Dia {enumerar_dias}. Q{i} es una {clasificacion_venta}")
+                    enumerar_dias +=1
             else:
                 print("No hay ventas registradas")
