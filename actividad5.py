@@ -5,7 +5,7 @@ while True:
     print("2. Mostrar todas las ventas ingresadas")
     print("3. Calcular venta más alta y baja")
     print("4. Calcular promedio de ventas")
-    print("5. Contar cuantos dias superaron los Q1000")
+    print("5. Ventas que superan los Q1000")
     print("6. Clasificar ventas")
     print("7. Salir")
     opcion= input("Ingrese una de las opciones: ")
@@ -44,6 +44,15 @@ while True:
                 for i in ventas:
                     total_de_ventas += i
                 promedio_ventas = total_de_ventas/len(ventas)
-                print(f"El promedio de las ventas es de {promedio_ventas:.2f}")
+                print(f"El promedio de las ventas es de Q{promedio_ventas:.2f}")
+            else:
+                print("No hay ventas registradas")
+        case "5":
+            if ventas:
+                contador =0
+                for i in ventas:
+                    if i > 1000:
+                        contador +=1
+                print(f"Los días en que las ventas superan los Q10OO: {contador}")
             else:
                 print("No hay ventas registradas")
