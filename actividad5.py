@@ -70,3 +70,8 @@ while True:
                     enumerar_dias +=1
             else:
                 print("No hay ventas registradas")
+        case "7":
+            print("Saliendo del programa...")
+            break
+        case _:
+            print("Ingrese una opcion valida")
