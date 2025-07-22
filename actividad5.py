@@ -1,3 +1,4 @@
+ventas = []
 while True:
     print("Menu de opciones")
     print("1. Ingresar lista de ventas")
@@ -8,3 +9,11 @@ while True:
     print("6. Buscar una venta")
     print("7. Clasificar ventas")
     print("8. Salir")
+    opcion= input("Ingrese una de las opciones: ")
+    match opcion:
+        case "1":
+            dias = int(input("Ingrese cuantos dias por venta quiere ingresar: "))
+            for i in range(dias+1):
+                venta = int(input("Ingrese las ventas de cada dia: "))
+                for j in range(venta+1):
+                    ventas.append((venta))
