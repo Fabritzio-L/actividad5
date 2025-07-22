@@ -23,3 +23,13 @@ while True:
             for i in ventas:
                 ind +=1
                 print(f"{ind}. Q{i}")
+        case "3":
+            venta_mayor= ventas[0]
+            venta_menor = ventas[0]
+            for i in ventas:
+                if i > venta_mayor:
+                    venta_mayor = i
+                if i < venta_menor:
+                    venta_menor = i
+            print(f"La venta mayor es: {venta_mayor}")
+            print(f"La venta menor es: {venta_menor}")
