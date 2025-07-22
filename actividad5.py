@@ -38,3 +38,12 @@ while True:
                 print(f"La venta mayor es: {venta_mayor}")
                 print(f"La venta menor es: {venta_menor}")
             else: print("No hay ventas registradas")
+        case "4":
+            if ventas:
+                total_de_ventas =0
+                for i in ventas:
+                    total_de_ventas += i
+                promedio_ventas = total_de_ventas/len(ventas)
+                print(f"El promedio de las ventas es de {promedio_ventas:.2f}")
+            else:
+                print("No hay ventas registradas")
